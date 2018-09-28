@@ -1,0 +1,783 @@
+References:
+
+Textbook examples, class examples, and w3schools examples of if statements and while loops
+
+
+
+Purpose: To provide the user with a playable story with the ultimate goal of finding the Book of Vile Darkness and bringing
+
+it to a place called The Archives.
+
+
+
+Write-up of the story itself is below the primary algorithm.
+
+
+
+1. Declare Variables
+
+race_type = nil
+
+player_name = nil
+
+payForInfo = nil
+
+isExperienced = nil
+
+isIntimidate = nil
+
+random_num = nil
+
+coins_gave = nil
+
+coins_give = nil
+
+coinGiver = nil
+
+pathColor = nil
+
+green_path = nil
+
+purple_path = nil
+
+red_path = nil
+
+gemType = nil
+
+gemLocation = nil
+
+mathSolution = nil
+
+game = nil
+
+try_again = nil
+
+entered_maze = nil
+
+story_end = nil
+
+
+
+2. Starting The Game
+
+Output "Welcome to The Book of Vile Darkness."
+
+race_type = input "What race would you like to play? (Dragonborn, Elf, or Wolf) "
+
+player_name = input "What is your name? "
+
+set game = 1
+
+
+
+3. Game Introduction
+
+while game = 1
+
+    print text in Section 1
+
+    input "bartender's question"
+
+    if isExperienced = yes
+
+        print Part 1A "If yes"
+
+    else
+
+        print Part 1A "If no"
+
+
+
+4. Section 2
+
+    print text in Section 2
+
+    input "Wil intimidate?"
+
+    if isIntimidate = yes
+
+        Part 2A-A run randomizor
+
+        if random_num > 11 and < 20
+
+            print Part 2A-A "If success"
+
+        if random_num > 1 and < 10
+
+            print Part 2A-A "If fail"
+
+            set coinGiver = 1
+
+        if random_num = 1
+
+            print "If game over"
+
+            input "try again?"
+
+            if try_again = yes
+
+                do nothing, game loop restarts
+
+            if try_again = no
+
+                set game = nil (game ends)
+
+    if isIntimidate = no
+
+        Print Part 2A-B text
+
+        input "how much will you give? "
+
+        if coins_gave <= 5
+
+            print Part 2A-B "if <= 5"
+
+            set coinGiver = 1
+
+        if coins_gave > 5 <= 10
+
+            print Part 2A-B "if > 5 <= 10"
+
+        if coins_gave > 10
+
+            print PArt 2A-B "if > 10"
+
+            set game = nil (game ends)
+
+
+
+    while coinGiver == 1
+
+        if coins_gave + coins_give <= 5
+
+            The bartender gives you a disappointed look. "Sorry, still can't remember..."
+
+        if coins_gave + coins_give > 5 and <=10
+
+            The bartender smiles. "Ya enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's ya check."
+
+        The charge was ten gold which you quickly pay before hurrying off.
+
+            coinGiver = 0
+
+            set entered_maze = 1
+
+        if coins_gave + coins_give > 10
+
+            The bartender smiles. "..."
+
+            coinGiver = nil
+
+
+
+5. Section 3
+
+    while entered_maze = 1
+
+        print Section 3 text
+
+        input "Why would you like to try? (purple, green, or red) "
+
+        if pathColor = "green"
+
+            green_path = 1
+
+        if pathColor = "purple"
+
+            purple_path = 1
+
+        if pathColor = "red"
+
+            red_path = 1
+
+
+
+6. Section 4 Green Path
+
+        while green_path = 1
+
+            print Section 4 text
+
+            input "Which gem? (emerald, amethyst, or ruby) "
+
+                if gemType = emerald
+
+                    print "door opens"
+
+                    story_end = 1
+
+                    green_path = nil
+
+                if gemType = ruby
+
+                    print "fall into lava pit"
+
+                    game = nil
+
+                    entered_maze = nil
+
+                    green_path = nil
+
+                if gemType = amethyst
+
+                    print "impaled by spike"
+
+                    game = nil
+
+                    entered_maze = nil
+
+                    green_path = nil
+
+
+
+7. Section 5 Purple Path
+
+        while purple_path = 1
+
+            print Section 5 text
+
+            input "Where to put the gem? (sun, or mountain) "
+
+            if gemLocation = mountain
+
+                print "door opens"
+
+                story_end = 1
+
+                purple_path = nil
+
+            if gemLocation = sun
+
+                print Part 5A "if sun"
+
+                purple_path = nil (restarts path selection)
+
+
+
+8. Section 6 Red Path
+
+        while red_path = 1
+
+        print "section 6 text"
+
+        float(input "what number is right? (17.40, 17.41, 18.3, or 16.99) ")
+
+            if mathSolution = 17.40
+
+                print "door opens"
+
+                story_end = 1
+
+                red_path = nil
+
+                entered_maze = nil
+
+
+
+9. Section 7 Story End
+
+    while story_end = 1
+
+        if player_race = dragonborn
+
+        print "You enter the portal and find yourself in a room that looks like it was designed for evil worship. On the walls are paintings
+
+of dragons, each one a different type. In the center of the room is a tome with a book on it. The title reads, "Book of
+
+Vile Darkness," in gold lettering and below that is an image of Tiamat, the dragon's Goddess of evil, devouring a city. When you touch the
+
+book it rises off the pedestal and opens to the first page. Calligraphic writing fades onto the page. "Hello, player_name,
+
+how may I serve you?""
+
+        if player_race = elf
+
+        print "You enter the portal and find yourself in a room that looks like a holy elvin temple. Fantastic elvin tapestries line
+
+the room, and the lighting is bright and natural. You feel almost at home here. In the center of the room, on an altar, sits
+
+a book with the elven rune for death on the front of it. In black lettering below the rune is the title: "Book of Vile Darkness."
+
+When you touch the book it rises into the air and opens itself to the first page. In gold calligraphic text it reads,
+
+"Hello, player_name, how may I serve you?""
+
+        if player_race = wolf
+
+        print "You enter the portal and find yourself in a room that looks like a wolf clan's sacred cave. Ceremonial draperies hang
+
+around the room, and on the far wall is a portrait of Xorthalax, the fierces wolf to ever have lived. Set upon a small
+
+pillow in the center of the room is a book. At the top of the cover, in blood red text are the words, "Book of Vile Darkness."
+
+Beneath that is the silhouette of a wolf's head eating a man. When you touch the book, it floats into the air and opens
+
+to the first page. There is writing on the page in blood red calligraphy. It reads: "Hello, player_name, how may I serve you?""
+
+
+
+    If player_race = dragonborn or green_path = 1
+
+        print "With an evil laugh you cast a spell from the book, destroying the labyrinth and carrying you high into the air. You
+
+survey the landscape, deciding which town to destroy first."
+
+        input "Play again?"
+
+            if try_again = yes
+
+                story_end = nil
+
+            else
+
+                story_end = nil
+
+                game = nil
+
+    If player_race = dragonborn and green_path = 0
+
+        print "You feel Tiamat's presence within the book, and you can feel her influence pushing into your mind. You quickly stick
+
+the book in your satchel and leave the labyrinth to deliver your prize to The Archives, a place where cursed relics can be
+
+safely stored and kept out of the wrong hands."
+
+            if try_again = yes
+
+                story_end = nil
+
+            else
+
+                story_end = nil
+
+                game = nil
+
+    else
+
+    You close the book and place it in your satchel and leave the labyrinth to deliver the book to The Archives, a place
+
+where cursed relics can be safely stored and kept out of the wrong hands.
+
+            if try_again = yes
+
+                story_end = nil
+
+            else
+
+                story_end = nil
+
+                game = nil
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+10. Storyboard
+
+    Section 1: Opening
+
+    Centuries ago there was a great war. In the desert just outside the city of Sandstone the final showdown occurred.
+
+A blue dragonborn named Famoria, and his dragon army, defeated the Arconaloth Xalto. The magic book he wielded, The Book
+
+of Vile Darkness, was lost after the battle, buried in a tomb beneath the bones of an ancient dragon.
+
+    Well, that's what this plaque says on the wall at least... Every time you visit this tavern, Dimdan's Tavern O' the
+
+Fallen, you find yourself gazing at the plaque while you drink the heavily spiked ale. Everyone that's gone searching for
+
+the book has never returned, and you wonder as you admire your weapons set and equipment whether or not you should attempt
+
+it.
+
+    The bartender approaches you while drying a few glasses. "Ya seem quite interested in that there plaque. You another
+
+one of them brash explorers?"
+
+
+
+    Part 1A
+
+    If yes: "Indeed. It's been my trade for twenty-five years now."
+
+    "Heh, yer dressed as one anyway. So, why ya so interested in the plaque? Ya wanna find the book?"
+
+    "What? You know something about it?"
+
+
+
+    If no: "No...but I aspire to be one."
+
+    "Well, if ya plan on searchin' for that book as your first expedition you'd best be turnin' back now. That tomb'll eat
+
+you up."
+
+    "If you know so much, perhaps you can tell me how to stay safe?"
+
+
+
+    Section 2: Fight or Flight
+
+    "Maybe, but my memory is foggy. Perhaps some gold will help clear it up." He grins and holds out his hand.
+
+    You put your hand on your coin pouch knowing you only have twenty gold coins.
+
+
+
+    Part 2A
+
+    Will you try to intimidate him? (yes or no)
+
+    If yes: You stand up, towering over him, and pull out one of your sharp shortswords. In a single, swift movement, you
+
+cut off the top half of the glass in his hand and point the sword at his neck. "Tell me what I want to know," you bellow.
+
+
+
+        Part 2A-A
+
+   (Randomizer unknown to user. If number is 11-20, intimidation successful. If 2-10 not successful and player will be
+
+asked to pay. If 1, it will be game over.)
+
+        If success: "Alright! Alright, I'll tell ya. No need ta cut me in half."
+
+            "Out with it then!" you shout in his face.
+
+            "Calm down will ya. Jus' enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's ya check."
+
+        The charge was ten gold which you quickly pay before hurrying off.
+
+
+
+        If fail: The bartender smiles and glances toward a massive man nearby that has a huge mace strapped to his belt. "I
+
+    would advise against angering my boss. He's got a mean streak and is a skilled assassin." His grin widens and he holds out
+
+    his hand again.
+
+
+
+        If game over: The bartender smiles and glances toward a massive man nearby that has a huge mace strapped to his belt. "I
+
+    would advise against angering my boss. He's got a mean streak and is a skilled assassin." His grin widens and he holds out
+
+    his hand again.
+
+        You ignore his threat and push the tip of your sword into his throat, drawing a little blood. Suddenly you are yanked
+
+    back and tossed onto a table behind you that breaks on impact. Before you can react, the mace is driven through your skull.
+
+    You are killed on impact.
+
+
+
+    If no:
+
+        Part 2A-B
+
+        You pull out your coin pouch and open it. How many coins would you like to give?
+
+        If <= 5 The bartender gives you a disappointed look. "Sorry, still can't remember..."
+
+        If > 5, <= 10 The bartender smiles. "Ya enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's ya check."
+
+        The charge was ten gold which you quickly pay before hurrying off.
+
+        If > 10 The bartender smiles. "You enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's your check."
+
+    You look down at the paper in your hands, realizing you can't pay it. Regret fills your mind as the bartender leads
+
+    you to the back to wash dishes. Because of your overspending you are stuck at the bar, working off your check and are
+
+    unable to go on the expedition.
+
+
+
+    Part 2B
+
+    You reach back into your coin pouch to give the man more. How much do you want to give? Remember, you only have
+
+coins_gave coins.
+
+     coins_give = input "How many coins will you give? "
+
+     coinGiver = 1
+
+     while coinGiver == 1
+
+        if coins_gave + coins_give <= 5
+
+            The bartender gives you a disappointed look. "Sorry, still can't remember..."
+
+        if coins_gave + coins_give > 5 and <=10
+
+            The bartender smiles. "Ya enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's ya check."
+
+        The charge was ten gold which you quickly pay before hurrying off.
+
+            coinGiver = 0
+
+            entered_maze = 1
+
+        if coins_gave + coins_give > 10
+
+            The bartender smiles. "You enter through the dragon's maw. There's a labyrinth from there. Be
+
+    careful of the zombies and manticores. I'm sure ya'd like to keep your brain and not be a statue. Now here's your check."
+
+    You look down at the paper in your hands, realizing you can't pay it. Regret fills your mind as the bartender leads
+
+    you to the back to wash dishes. Because of your overspending you are stuck at the bar, working off your check and are
+
+    unable to go on the expedition.
+
+            coingGiver = 0
+
+
+
+    Section 3: Enter the Maze
+
+    It takes you just about an hour to get to the ancient dragon bones. You find, just as the bartender said, a door inside
+
+the beast's mouth. Cautiously you approach and find a something inscribed on the door.
+
+    "Three colors here,
+
+    do ye see.
+
+    One per path,
+
+    and paths be three,
+
+    so which color,
+
+    be for ye?"
+
+    On the door there are three colored boxes that look like they can be pushed; one is purple, one is yellow, and one is
+
+green. Which one would to try?
+
+
+
+    Part 3A:
+
+    If green
+
+        start green path
+
+        green_path = 1
+
+    if purple
+
+        start purple path
+
+        purple_path = 1
+
+    if red
+
+        start red path
+
+        red_path = 1
+
+
+
+    Section 4: Green Path
+
+    The door slowly opens revealing a long, winding hallway. Lining the walls are torches that burn with green flame. You
+
+also notice that there are paintings of various dragons. In each one, the dragon is holding a green emerald. After roughly
+
+ten minutes of walking the hallway comes to an end. There is a large painting of a green dragon, but there is a space where
+
+his hands are. You notice on a desk before the painting are what appear to be various chunks of the painting. One has another
+
+green emerald in the dragon's hands, one has a yellow citrine, and one has a purple amethyst.
+
+    Which gem do you think you should put in the slot? (emerald, ruby, or amethyst)
+
+
+
+    Part 4A
+
+    if emerald
+
+        The painting slowly swirls into a strange, wavy portal.
+
+        go to Section 7
+
+    if ruby
+
+    The floor panel opens below you and you fall through a chute. The chute spits you into a lava pit where you join the
+
+other lost souls of the labyrinth.
+
+    if amethyst
+
+    A spike shoots up from the floor impaling you, killing you instantly.
+
+
+
+    Section 5: Purple Path
+
+    The door slowly opens revealing a wide room. At the other end is another door that appears to be locked. You notice
+
+there are wolves carved into the walls, and they are all holding an amethyst. Inscribed on the far door is riddle.
+
+    "Only those who hold up purple can escape the wrath of the pack. Those who don't are sent all the way back."
+
+    As you ponder the message you notice the wolves come off the walls. They seem focused at the center of the room. Before
+
+your eyes, the center of the floor opens and an amethyst rises up on a pedestal. At that moment you realize what you are
+
+supposed to do. You grab the amethyst off the pedestal and run to the door with it over your head. Two panels suddenly open
+
+on the door, one in the middle of a carved sun, and one above a mountain.
+
+    Where do you want to put the amethyst? (sun, or mountain)
+
+
+
+    Part 5A
+
+    if sun
+
+    The wolves surround you and all at once pounce. You suddenly feel light and fuzzy as the room starts spinning. When
+
+everything is still again, you find yourself at the main entrance again.
+
+    Repeat Section3
+
+
+
+    if mountain
+
+    The wolves return to the walls and the door slowly slides open. Through the door is a strange portal.
+
+    go to Section 7
+
+
+
+    Section 6: Red Path
+
+    The door opens revealing a short hallway lit by ominous red torches. At the other end is a door with what appears to
+
+be a math equation. Beneath it is an inscription that reads, "solve me correctly and proceed. Solve incorrectly and don't
+
+succeed."
+
+    You examine the math problem and pull out a notebook and pencil. The equation asks you to find the solution of 6.45 +
+
+10.95. Below the inscription are four buttons you can push with answers inscribed. They are 17.40, 17.41, 18.3, and 16.99.
+
+Which button will you push?
+
+
+
+    Part 6A
+
+    if 17.40
+
+    The door slides open revealing a strange portal behind it.
+
+    go to Section 7
+
+
+
+    else
+
+    An spike shoots out of the wall, going straight through your skull. Unfortunately you join the lost souls of the labyrinth.
+
+
+
+    Section 7: At Last, The Book
+
+    Part 7A
+
+    if player_race = dragonborn
+
+    You enter the portal and find yourself in a room that looks like it was designed for evil worship. On the walls are paintings
+
+of dragons, each one a different type. In the center of the room is a tome with a book on it. The title reads, "Book of
+
+Vile Darkness," in gold lettering and below that is an image of Tiamat, the dragon's Goddess of evil, devouring a city. When you touch the
+
+book it rises off the pedestal and opens to the first page. Calligraphic writing fades onto the page. "Hello, player_name,
+
+how may I serve you?"
+
+
+
+    if player_race = elf
+
+    You enter the portal and find yourself in a room that looks like a holy elvin temple. Fantastic elvin tapestries line
+
+the room, and the lighting is bright and natural. You feel almost at home here. In the center of the room, on an altar, sits
+
+a book with the elven rune for death on the front of it. In black lettering below the rune is the title: "Book of Vile Darkness."
+
+When you touch the book it rises into the air and opens itself to the first page. In gold calligraphic text it reads,
+
+"Hello, player_name, how may I serve you?"
+
+
+
+    If player_race = wolf
+
+    You enter the portal and find yourself in a room that looks like a wolf clan's sacred cave. Ceremonial draperies hang
+
+around the room, and on the far wall is a portrait of Xorthalax, the fierces wolf to ever have lived. Set upon a small
+
+pillow in the center of the room is a book. At the top of the cover, in blood red text are the words, "Book of Vile Darkness."
+
+Beneath that is the silhouette of a wolf's head eating a man. When you touch the book, it floats into the air and opens
+
+to the first page. There is writing on the page in blood red calligraphy. It reads: "Hello, player_name, how may I serve you?"
+
+
+
+    Part 7B
+
+    If player_race = dragonborn or green_path = 1
+
+    With an evil laugh you cast a spell from the book, destroying the labyrinth and carrying you high into the air. You
+
+survey the landscape, deciding which town to destroy first.
+
+
+
+    If player_race = dragonborn and green_path = 0
+
+    You feel Tiamat's presence within the book, and you can feel her influence pushing into your mind. You quickly stick
+
+the book in your satchel and leave the labyrinth to deliver your prize to The Archives, a place where cursed relics can be
+
+safely stored and kept out of the wrong hands.
+
+
+
+    else
+
+    You close the book and place it in your satchel and leave the labyrinth to deliver the book to The Archives, a place
+
+where cursed relics can be safely stored and kept out of the wrong hands.
